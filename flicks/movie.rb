@@ -1,0 +1,30 @@
+class Movie
+	attr_reader  :rank
+	attr_accessor :title
+
+	def initialize(title,rank=0)
+		#transfer to instance variable with @ <- instance
+		#they don't need to match the initialize var name
+		#by default an object state is PRIVATE we dont get access to the instance variables by default
+		@title = title.capitalize
+		@rank = rank
+		#@normalized_rank = @rank /100
+	end
+
+	def normalized_rank
+		@rank / 10
+	end
+
+	def thumbs_up
+		@rank += 1 
+	end
+
+	def thumbs_down
+		@rank -= 1
+	end
+
+	def to_s
+		"#{@title} has a rank of #{@rank}"
+	end
+end 
+
