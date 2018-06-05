@@ -1,0 +1,12 @@
+1.A Class is a factory (blueprint) that instantiates objects (instances).
+
+2. Objects have unique state and a common set of methods (behaviours).
+
+3. An instance variable exists for the life of an object.
+
+4.Instance methods have access to their object's instance variables
+
+5. Class names start with an upercase letter.
+Method names start with a lowercase letter.
+Variable names start with a lowercase letter.
+Instances variables start with an @.
