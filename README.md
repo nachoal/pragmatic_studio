@@ -1,3 +1,3 @@
-#Pragmatic Studio followup 
+# Pragmatic Studio followup 
 
-[from ruby course at](https://pragmaticstudio.com/ruby)
+[From this ruby course](https://pragmaticstudio.com/ruby)
