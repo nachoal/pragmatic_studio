@@ -3,7 +3,7 @@ class Project
 	attr_reader :funding, :goal
 	attr_accessor :name
 
-	def initialize(name, funding, goal)
+	def initialize(name, funding=0, goal=0)
 		@name = name
 		@funding = funding
 		@goal = goal 
@@ -26,4 +26,9 @@ class Project
 	def total_needed
 		@goal - @funding  
 	end
+end
+
+if __FILE__ == $0 
+	proyectito =  Project.new("proy", 100, 1000)
+	puts proyectito.total_needed	
 end
