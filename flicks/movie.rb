@@ -24,7 +24,20 @@ class Movie
 	end
 
 	def to_s
-		"#{@title} has a rank of #{@rank}"
+		"#{@title} has a rank of #{@rank} (#{status})"
+	end
+	#a code style convention indicating that a method returns boolean val
+	def hit?	
+		@rank >= 10 
+	end
+
+	def status
+		# if hit? 
+		# 	"Hit"
+		# else
+		# 	"Flop"
+		# end this is the same as:  
+		hit? ? "Hit" : "Flop"
 	end
 end 
 

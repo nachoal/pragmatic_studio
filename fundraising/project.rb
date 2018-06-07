@@ -26,6 +26,10 @@ class Project
 	def total_needed
 		@goal - @funding  
 	end
+
+	def funded?
+		@funding >= @goal
+	end
 end
 
 if __FILE__ == $0 

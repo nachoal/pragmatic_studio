@@ -1,4 +1,6 @@
 require_relative 'player'
+require_relative 'die'
+require_relative 'game_turn'
 
 class Game
 
@@ -13,7 +15,7 @@ class Game
 
 	def add_player(player)
 		@players << player 
-	end
+	end 
 
 	def play
 		puts "There are #{@players.size} players in #{@name}:"
@@ -22,13 +24,11 @@ class Game
 			
 		end
 
-		@players.each do |player|
-			player.blam
-			player.w00t
-			player.w00t
-			puts player
 
-			
+
+		@players.each do |player|
+			GameTurn.take_turn(player)
+			puts player 
 		end
 	end
 end

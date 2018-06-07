@@ -1,5 +1,6 @@
 require_relative 'movie'
 require_relative 'playlist'
+require_relative 'waldorf_and_staler'
 
 movie1 = Movie.new("goonies",10)
 movie2 = Movie.new("ghostbusters",9)

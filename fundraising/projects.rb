@@ -1,5 +1,5 @@
 require_relative 'project'
-
+require_relative 'funding_round'
 class Projects
 	def initialize(name)
 		@name = name
@@ -21,7 +21,7 @@ class Projects
 		end
 
 		@projects.each do |p|
-			p.add_funds(2500)
+			FundingRound.funding_round(p)
 			puts p
 			
 		end
