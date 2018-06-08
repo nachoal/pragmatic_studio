@@ -1,5 +1,6 @@
 require_relative 'die'
 require_relative 'player'
+require_relative 'treasure_trove'
 
 module GameTurn
 	
@@ -14,5 +15,9 @@ module GameTurn
 			else
 				player.w00t
 		end
+		item = TreasureTrove.random
+
+			puts "#{player.name} found a #{item.name} woth #{item.point}."
+
 	end
 end

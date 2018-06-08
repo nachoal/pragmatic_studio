@@ -14,15 +14,15 @@ describe Game do
 	it "w00ts the player when a high number is rolled" do
 		Die.any_instance.stub(:roll).and_return(5)
 
-		@game.play 
+		@game.play(2) 
 
-		@player.health.should == @initial_health + 15
+		@player.health.should == @initial_health + (15*2)
 	end
 
 	it "Passes the player when a medium number is rolled" do
 		Die.any_instance.stub(:roll).and_return(4)
 
-		@game.play
+		@game.play(2)
 
 		@player.health.should == @initial_health 
 
@@ -31,7 +31,7 @@ describe Game do
 	it "Blams the player when a low number is rolled" do
 		Die.any_instance.stub(:roll).and_return(2)
 
-		@game.play
-		@player.health.should == @initial_health - 10
+		@game.play(2)
+		@player.health.should == @initial_health - (10*2)
 	end
 end

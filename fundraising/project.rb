@@ -30,6 +30,10 @@ class Project
 	def funded?
 		@funding >= @goal
 	end
+
+	def <=>(next_project)
+		next_project.total_needed <=> total_needed 
+	end
 end
 
 if __FILE__ == $0 

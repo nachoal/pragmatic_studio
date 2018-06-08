@@ -1,4 +1,5 @@
 require_relative 'project'
+require_relative 'possible_pledges'
 
 module FundingRound
 	def self.funding_round(p)
@@ -14,5 +15,9 @@ module FundingRound
 		else
 			puts "#{p.name} still needs #{p.total_needed}"
 		end
+
+		randomPledge = PossiblePledges::random
+
+		puts "#{p.name} received a #{randomPledge.name} pledge for #{randomPledge.amount}!"
 	end
 end
